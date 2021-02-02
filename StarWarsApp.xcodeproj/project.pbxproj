@@ -15,6 +15,7 @@
 		483AC50B25C9BE80006C6DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483AC50925C9BE80006C6DE6 /* LaunchScreen.storyboard */; };
 		483AC51625C9BE80006C6DE6 /* StarWarsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC51525C9BE80006C6DE6 /* StarWarsAppTests.swift */; };
 		483AC52125C9BE80006C6DE6 /* StarWarsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC52025C9BE80006C6DE6 /* StarWarsAppUITests.swift */; };
+		483AC53D25C9E72E006C6DE6 /* URLStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC53C25C9E72E006C6DE6 /* URLStrings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		483AC51C25C9BE80006C6DE6 /* StarWarsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		483AC52025C9BE80006C6DE6 /* StarWarsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAppUITests.swift; sourceTree = "<group>"; };
 		483AC52225C9BE80006C6DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		483AC53C25C9E72E006C6DE6 /* URLStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLStrings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +101,12 @@
 		483AC4FD25C9BE7C006C6DE6 /* StarWarsApp */ = {
 			isa = PBXGroup;
 			children = (
-				483AC4FE25C9BE7C006C6DE6 /* AppDelegate.swift */,
-				483AC50025C9BE7C006C6DE6 /* SceneDelegate.swift */,
-				483AC50225C9BE7C006C6DE6 /* ViewController.swift */,
-				483AC50425C9BE7C006C6DE6 /* Main.storyboard */,
+				483AC54525C9E746006C6DE6 /* AppDelegates */,
+				483AC54925C9E75D006C6DE6 /* Controllers */,
+				483AC54D25C9E769006C6DE6 /* Views */,
 				483AC50725C9BE80006C6DE6 /* Assets.xcassets */,
-				483AC50925C9BE80006C6DE6 /* LaunchScreen.storyboard */,
 				483AC50C25C9BE80006C6DE6 /* Info.plist */,
+				483AC54125C9E735006C6DE6 /* Helpers */,
 			);
 			path = StarWarsApp;
 			sourceTree = "<group>";
@@ -126,6 +127,40 @@
 				483AC52225C9BE80006C6DE6 /* Info.plist */,
 			);
 			path = StarWarsAppUITests;
+			sourceTree = "<group>";
+		};
+		483AC54125C9E735006C6DE6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				483AC53C25C9E72E006C6DE6 /* URLStrings.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		483AC54525C9E746006C6DE6 /* AppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				483AC4FE25C9BE7C006C6DE6 /* AppDelegate.swift */,
+				483AC50025C9BE7C006C6DE6 /* SceneDelegate.swift */,
+			);
+			path = AppDelegates;
+			sourceTree = "<group>";
+		};
+		483AC54925C9E75D006C6DE6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				483AC50225C9BE7C006C6DE6 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		483AC54D25C9E769006C6DE6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				483AC50425C9BE7C006C6DE6 /* Main.storyboard */,
+				483AC50925C9BE80006C6DE6 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				483AC53D25C9E72E006C6DE6 /* URLStrings.swift in Sources */,
 				483AC50325C9BE7C006C6DE6 /* ViewController.swift in Sources */,
 				483AC4FF25C9BE7C006C6DE6 /* AppDelegate.swift in Sources */,
 				483AC50125C9BE7C006C6DE6 /* SceneDelegate.swift in Sources */,
@@ -438,6 +474,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = StarWarsApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,6 +493,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = StarWarsApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
