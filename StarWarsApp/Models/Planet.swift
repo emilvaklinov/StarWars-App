@@ -15,11 +15,11 @@ struct Planet: Codable {
 // MARK: - Result
 struct PlanetResult: Codable {
     
-    let name, diameter, rotationPeriod, gravity: String?
-    let population, climate, terrain, surfaceWater: String?
-    let residents: [String]?
-    let films: [String]?
-    let url, created, edited: String?
+    let name, diameter, rotationPeriod, gravity: String
+    let population, climate, terrain, surfaceWater: String
+    let residents: [String]
+    let films: [String]
+    let url, created, edited: String
     
     enum CodingKeys: String, CodingKey {
         case name, diameter, gravity

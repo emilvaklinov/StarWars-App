@@ -1,5 +1,5 @@
 //
-//  PeopleDetailVC.swift
+//  PlanetDetailVC.swift
 //  StarWarsApp
 //
 //  Created by Emil Vaklinov on 05/02/2021.
@@ -8,25 +8,25 @@
 
 import UIKit
 
-class PeopleDetailVC: UIViewController {
+class PlanetDetailVC: UIViewController {
 
-    private var viewModel: PeopleDetailVM?
+    private var planetDetailVM: PlanetDetailVM?
     
-    func configure(with viewModel: PeopleDetailVM) {
-        self.viewModel = viewModel
+    func configure(with planetDetailVM: PlanetDetailVM) {
+        self.planetDetailVM = planetDetailVM
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "People".localized()
+        title = "Planets".localized()
     }
 }
 
-extension PeopleDetailVC: UITableViewDataSource {
+extension PlanetDetailVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "characterDetail",
                                                  for: indexPath)
-        if let type = viewModel?.rowDetails(for: indexPath) {
+        if let type = planetDetailVM?.rowDetails(for: indexPath) {
             cell.textLabel?.text = type.description
             cell.detailTextLabel?.text = type.value
         }
@@ -35,10 +35,10 @@ extension PeopleDetailVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.rowCount(for: section) ?? 0
+        return planetDetailVM?.rowCount(for: section) ?? 0
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel?.sectionCount ?? 0
+        return planetDetailVM?.sectionCount ?? 0
     }
 }

@@ -8,7 +8,7 @@
 
 
 "Star Wars" = "Star Wars";
-"Character: Details" = "Character: Details";
+"People" = "People";
 "Name" = "Name";
 "Birth Year" = "Birth Year";
 "Height" = "Height";
@@ -20,6 +20,7 @@
 "Film" = "Film";
 "Opening crawl" = "Opening crawl";
 
+"Planets" = "Planets";
 "Diameter" = "Diameter";
 "Gravity" = "Gravity";
 "Rotation Period" = "Rotation Period";
@@ -32,6 +33,7 @@
 "Created" = "Created";
 "Edited" = "Edited";
 
+"Starships" = "Starships";
 "Model" = "Model";
 "Manufacturer" = "Manufacturer";
 "Length" = "Length";
@@ -43,5 +45,5 @@
 "Startship Class" = "Startship Class";
 "Cost In Credits" = "Cost In Credits";
 "MGLT" = "MGLT";
-"Consumables" = "Consumables"
-"Pilots" = "Pilots"
+"Consumables" = "Consumables";
+"Pilots" = "Pilots";

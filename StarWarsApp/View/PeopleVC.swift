@@ -17,13 +17,14 @@ class PeopleVC: UIViewController {
     private let disposeBag = DisposeBag()
     
     private let viewModel = PeopleVM()
+    private let planetVM = PlanetVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //        navigationItem.title = "Star Wаrs"
         title = "Star Wars".localized()
         triggerFetchPeople()
+        triggerFetchPlanet()
     }
     
     
@@ -38,6 +39,19 @@ class PeopleVC: UIViewController {
                 // Show alert
             }).disposed(by: disposeBag)
     }
+    
+    private func triggerFetchPlanet() {
+        ActivityIndicator.shared.show(in: view)
+        planetVM.fetchPlanet()
+            .subscribe(onCompleted: {
+                ActivityIndicator.shared.hide()
+                self.tableView.reloadData()
+            }, onError: { error in
+                ActivityIndicator.shared.hide()
+                // Show alert
+            }).disposed(by: disposeBag)
+    }
+    
     
     private func triggerFetchFilms(for index: Int) {
         ActivityIndicator.shared.show(in: view)
@@ -59,6 +73,14 @@ class PeopleVC: UIViewController {
         }
         navigationController?.pushViewController(view, animated: true)
     }
+    
+    private func routeToPlanetDetails(for index: Int) {
+        let model = planetVM.dataModel(for: index)
+        guard let view = PlanetViewFactory.createDetailView(for: model) else {
+            return
+        }
+        navigationController?.pushViewController(view, animated: true)
+    }
 }
 
 extension PeopleVC: UITableViewDataSource {
@@ -73,14 +95,15 @@ extension PeopleVC: UITableViewDataSource {
             return cell
             
         case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "peopleCell",
+            let cell = tableView.dequeueReusableCell(withIdentifier: "planetCell",
                                                      for: indexPath)
+            //            cell.textLabel?.text = planetVM.planet[indexPath.row]
             cell.textLabel?.text = viewModel.people[indexPath.row]
             cell.selectionStyle = .none
             return cell
             
         case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "peopleCell",
+            let cell = tableView.dequeueReusableCell(withIdentifier: "starshipCell",
                                                      for: indexPath)
             cell.textLabel?.text = viewModel.people[indexPath.row]
             cell.selectionStyle = .none
@@ -104,10 +127,12 @@ extension PeopleVC: UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        
         3
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+
         switch section {
         case 0:
             return "People"
@@ -120,21 +145,13 @@ extension PeopleVC: UITableViewDataSource {
         }
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 40))
-        view.backgroundColor = .red
         
-        let lbl = UILabel(frame: CGRect(x: 15, y: 0, width: view.frame.width - 15, height: 40))
-        view.addSubview(lbl)
-        
-        return view
-    }
-    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
+        return 50
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         return 70
     }
 }
