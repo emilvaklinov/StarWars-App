@@ -9,6 +9,10 @@ import Foundation
 
 struct Planet: Codable {
     
+    let planetResults: [PlanetResult]
+}
+struct PlanetResult: Codable {
+    
     var name: String?
     var diameter: String?
     var rotationPeriod: String?

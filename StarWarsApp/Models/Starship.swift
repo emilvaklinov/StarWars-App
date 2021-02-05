@@ -9,6 +9,10 @@ import Foundation
 
 struct Starship: Codable {
     
+    let starshipResults: [StarshipResult]
+}
+struct StarshipResult: Codable {
+    
     var name: String?
     var model: String?
     var startshipClass: String?
