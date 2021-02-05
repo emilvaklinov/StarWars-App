@@ -22,6 +22,8 @@
 		483AC56325C9F095006C6DE6 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC56225C9F095006C6DE6 /* Starship.swift */; };
 		483AC5E825CD7BC9006C6DE6 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC5E725CD7BC9006C6DE6 /* Film.swift */; };
 		483AC5F025CD7D78006C6DE6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 483AC5EF25CD7D78006C6DE6 /* Localizable.strings */; };
+		483AC5F625CD7E07006C6DE6 /* API+Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC5F525CD7E07006C6DE6 /* API+Moya.swift */; };
+		483AC5FE25CD7E9C006C6DE6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC5FD25CD7E9C006C6DE6 /* NetworkService.swift */; };
 		53935E3870198BFBE03CCB0C /* Pods_StarWarsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C85F8C49F4D002542110FD52 /* Pods_StarWarsAppTests.framework */; };
 		B5AAC21FD3BBDD19D4127975 /* Pods_StarWarsApp_StarWarsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3474E9D7EE00B13EBD382A0F /* Pods_StarWarsApp_StarWarsAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +70,8 @@
 		483AC56225C9F095006C6DE6 /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
 		483AC5E725CD7BC9006C6DE6 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		483AC5EF25CD7D78006C6DE6 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		483AC5F525CD7E07006C6DE6 /* API+Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Moya.swift"; sourceTree = "<group>"; };
+		483AC5FD25CD7E9C006C6DE6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		8A6B33160211203EE500B1E9 /* Pods_StarWarsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C85F8C49F4D002542110FD52 /* Pods_StarWarsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB92567F3E54987F5CCDD32D /* Pods-StarWarsApp-StarWarsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsApp-StarWarsAppUITests.release.xcconfig"; path = "Target Support Files/Pods-StarWarsApp-StarWarsAppUITests/Pods-StarWarsApp-StarWarsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 		483AC4FD25C9BE7C006C6DE6 /* StarWarsApp */ = {
 			isa = PBXGroup;
 			children = (
+				483AC5F425CD7DD6006C6DE6 /* Networking */,
 				483AC54525C9E746006C6DE6 /* AppDelegates */,
 				483AC54925C9E75D006C6DE6 /* Controllers */,
 				483AC54D25C9E769006C6DE6 /* Views */,
@@ -214,6 +219,15 @@
 				483AC5E725CD7BC9006C6DE6 /* Film.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		483AC5F425CD7DD6006C6DE6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				483AC5F525CD7E07006C6DE6 /* API+Moya.swift */,
+				483AC5FD25CD7E9C006C6DE6 /* NetworkService.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		5E3A43A497EE0E8BC96F95E3 /* Frameworks */ = {
@@ -466,6 +480,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				483AC5FE25CD7E9C006C6DE6 /* NetworkService.swift in Sources */,
 				483AC53D25C9E72E006C6DE6 /* String+Localizable.swift in Sources */,
 				483AC56325C9F095006C6DE6 /* Starship.swift in Sources */,
 				483AC50325C9BE7C006C6DE6 /* ViewController.swift in Sources */,
@@ -474,6 +489,7 @@
 				483AC5E825CD7BC9006C6DE6 /* Film.swift in Sources */,
 				483AC50125C9BE7C006C6DE6 /* SceneDelegate.swift in Sources */,
 				483AC55225C9EFAC006C6DE6 /* People.swift in Sources */,
+				483AC5F625CD7E07006C6DE6 /* API+Moya.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
