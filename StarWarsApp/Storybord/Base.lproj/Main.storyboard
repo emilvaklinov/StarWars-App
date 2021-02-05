@@ -90,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="140.57971014492756" y="92.410714285714278"/>
         </scene>
-        <!--Character DetailVC-->
+        <!--People DetailVC-->
         <scene sceneID="U9I-vM-Zff">
             <objects>
-                <viewController storyboardIdentifier="CharacterDetailVC" id="PD4-B1-2OE" customClass="CharacterDetailVC" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PeopleDetailVC" id="PD4-B1-2OE" customClass="PeopleDetailVC" customModule="StarWarsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z7S-h1-Osq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
