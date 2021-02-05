@@ -66,7 +66,7 @@ class PeopleVC: UIViewController {
             }.disposed(by: disposeBag)
     }
     
-    private func routeToCharacterDetails(for index: Int) {
+    fileprivate func routeToCharacterDetails(for index: Int) {
         let model = viewModel.dataModel(for: index)
         guard let view = ViewFactory.createDetailView(for: model) else {
             return
@@ -74,9 +74,9 @@ class PeopleVC: UIViewController {
         navigationController?.pushViewController(view, animated: true)
     }
     
-    private func routeToPlanetDetails(for index: Int) {
-        let model = planetVM.dataModel(for: index)
-        guard let view = PlanetViewFactory.createDetailView(for: model) else {
+    fileprivate func routeToPlanetDetails(for index: Int) {
+        let modelPlanet = planetVM.dataModel(for: index)
+        guard let view = PlanetViewFactory.createDetailView(for: modelPlanet) else {
             return
         }
         navigationController?.pushViewController(view, animated: true)
@@ -84,8 +84,30 @@ class PeopleVC: UIViewController {
 }
 
 extension PeopleVC: UITableViewDataSource {
+   
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //        return viewModel.people.count
+        
+        switch section {
+        
+        //  For the user details, return the count of the array
+        case 0: return viewModel.people.count
+        case 1: return planetVM.planet.count
+        case 2: return planetVM.planet.count
+        default: return 0
+        }
+        print(viewModel.people.count)
+        print(planetVM.planet.count)
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        
+        3
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "peopleCell",
@@ -93,42 +115,23 @@ extension PeopleVC: UITableViewDataSource {
             cell.textLabel?.text = viewModel.people[indexPath.row]
             cell.selectionStyle = .none
             return cell
-            
+
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "planetCell",
                                                      for: indexPath)
-            //            cell.textLabel?.text = planetVM.planet[indexPath.row]
-            cell.textLabel?.text = viewModel.people[indexPath.row]
+            cell.textLabel?.text = planetVM.planet[indexPath.row]
             cell.selectionStyle = .none
             return cell
-            
+
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "starshipCell",
                                                      for: indexPath)
-            cell.textLabel?.text = viewModel.people[indexPath.row]
+            cell.textLabel?.text = "viewModel.people[indexPath.row]"
             cell.selectionStyle = .none
-            
+
             return cell
         default: return UITableViewCell()
         }
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //        return viewModel.people.count
-        
-        switch section {
-        
-        //             For the user details, return the count of the array
-        case 0: return viewModel.people.count
-        case 1: return viewModel.people.count
-        case 2: return viewModel.people.count
-        default: return 0
-        }
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        
-        3
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

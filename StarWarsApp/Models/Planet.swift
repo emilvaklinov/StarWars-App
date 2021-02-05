@@ -9,7 +9,7 @@ import Foundation
 
 struct Planet: Codable {
     
-    let planetResults: [PlanetResult]
+    let results: [PlanetResult]
 }
 
 // MARK: - Result

@@ -18,7 +18,7 @@ class PlanetVM {
     let network = NetworkService()
     
     var planetResults: [PlanetResult]? {
-        planetModel?.planetResults.sorted(by: { $0.name < $1.name })
+        planetModel?.results.sorted(by: { $0.name < $1.name })
     }
     
     var planet: [String] {
