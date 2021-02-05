@@ -34,8 +34,10 @@ extension API: TargetType {
         switch self {
         case .fetchPeople:
             return "/people"
-        case .fetchPlanet
-        case .fetchStarship
+        case .fetchPlanet:
+            return "/planets"
+        case .fetchStarship:
+            return "/starships"
         case .fetchFilmDetails(let id):
             return "/films/\(id)"
         }
