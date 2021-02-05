@@ -73,6 +73,10 @@ extension PeopleVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.people.count
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        1
+    }
 }
 
 extension PeopleVC: UITableViewDelegate {
