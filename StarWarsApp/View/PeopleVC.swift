@@ -10,7 +10,7 @@ import Lottie
 import RxSwift
 
 class PeopleVC: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -20,12 +20,12 @@ class PeopleVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-//        navigationItem.title = "Star Wаrs"
+        
+        //        navigationItem.title = "Star Wаrs"
         title = "Star Wars".localized()
         triggerFetchPeople()
     }
-
+    
     
     private func triggerFetchPeople() {
         ActivityIndicator.shared.show(in: view)
@@ -47,9 +47,9 @@ class PeopleVC: UIViewController {
                 self.routeToCharacterDetails(for: index)
             }) { (error) in
                 ActivityIndicator.shared.hide()
-
+                
                 // show alert
-        }.disposed(by: disposeBag)
+            }.disposed(by: disposeBag)
     }
     
     private func routeToCharacterDetails(for index: Int) {
@@ -63,19 +63,79 @@ class PeopleVC: UIViewController {
 
 extension PeopleVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "peopleCell",
-                                                 for: indexPath)
-        cell.textLabel?.text = viewModel.people[indexPath.row]
-        cell.selectionStyle = .none
-        return cell
+        
+        switch indexPath.section {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "peopleCell",
+                                                     for: indexPath)
+            cell.textLabel?.text = viewModel.people[indexPath.row]
+            cell.selectionStyle = .none
+            return cell
+            
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "peopleCell",
+                                                     for: indexPath)
+            cell.textLabel?.text = viewModel.people[indexPath.row]
+            cell.selectionStyle = .none
+            return cell
+            
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "peopleCell",
+                                                     for: indexPath)
+            cell.textLabel?.text = viewModel.people[indexPath.row]
+            cell.selectionStyle = .none
+            
+            return cell
+        default: return UITableViewCell()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.people.count
+        //        return viewModel.people.count
+        
+        switch section {
+        
+        //             For the user details, return the count of the array
+        case 0: return viewModel.people.count
+        case 1: return viewModel.people.count
+        case 2: return viewModel.people.count
+        default: return 0
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        1
+        3
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "People"
+        case 1:
+            return "Planet"
+        case 2:
+            return "Starship"
+        default:
+            return nil
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 40))
+        view.backgroundColor = .red
+        
+        let lbl = UILabel(frame: CGRect(x: 15, y: 0, width: view.frame.width - 15, height: 40))
+        view.addSubview(lbl)
+        
+        return view
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
     }
 }
 
