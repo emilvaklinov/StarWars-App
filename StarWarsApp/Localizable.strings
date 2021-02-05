@@ -19,3 +19,29 @@
 "Gender" = "Gender";
 "Film" = "Film";
 "Opening crawl" = "Opening crawl";
+
+"Diameter" = "Diameter";
+"Gravity" = "Gravity";
+"Rotation Period" = "Rotation Period";
+"Surface Water" = "Surface Water";
+"Population" = "Population";
+"Climate" = "Climate";
+"Terrain" = "Terrain";
+"Residents" = "Residents";
+"Url" = "Url";
+"Created" = "Created";
+"Edited" = "Edited";
+
+"Model" = "Model";
+"Manufacturer" = "Manufacturer";
+"Length" = "Length";
+"Crew" = "Crew";
+"Passengers" = "Passengers";
+"Max Atmosphering Speed" = "Max Atmosphering Speed";
+"Hyperdrive Rating" = "Hyperdrive Rating";
+"Cargo Capacity" = "Cargo Capacity";
+"Startship Class" = "Startship Class";
+"Cost In Credits" = "Cost In Credits";
+"MGLT" = "MGLT";
+"Consumables" = "Consumables"
+"Pilots" = "Pilots"
