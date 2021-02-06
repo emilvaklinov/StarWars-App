@@ -24,7 +24,7 @@
 		483AC5F025CD7D78006C6DE6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 483AC5EF25CD7D78006C6DE6 /* Localizable.strings */; };
 		483AC5F625CD7E07006C6DE6 /* API+Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC5F525CD7E07006C6DE6 /* API+Moya.swift */; };
 		483AC5FE25CD7E9C006C6DE6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC5FD25CD7E9C006C6DE6 /* NetworkService.swift */; };
-		483AC61325CD875F006C6DE6 /* PeopleViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC61225CD875F006C6DE6 /* PeopleViewFactory.swift */; };
+		483AC61325CD875F006C6DE6 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC61225CD875F006C6DE6 /* ViewFactory.swift */; };
 		483AC61825CD87B0006C6DE6 /* PeopleDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC61725CD87B0006C6DE6 /* PeopleDetailVC.swift */; };
 		483AC62025CD9C52006C6DE6 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC61F25CD9C51006C6DE6 /* ActivityIndicator.swift */; };
 		483AC62825CD9D12006C6DE6 /* ActivityIndicator.json in Resources */ = {isa = PBXBuildFile; fileRef = 483AC62725CD9D12006C6DE6 /* ActivityIndicator.json */; };
@@ -32,13 +32,11 @@
 		483AC63325CD9E4C006C6DE6 /* PeopleDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC63225CD9E4C006C6DE6 /* PeopleDetailVM.swift */; };
 		483AC64825CDB57D006C6DE6 /* PlanetVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC64725CDB57C006C6DE6 /* PlanetVM.swift */; };
 		483AC65025CDB594006C6DE6 /* PlanetDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC64F25CDB594006C6DE6 /* PlanetDetailVM.swift */; };
-		483AC65525CDC633006C6DE6 /* PlanetViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC65425CDC632006C6DE6 /* PlanetViewFactory.swift */; };
 		483AC65E25CDC785006C6DE6 /* PlanetDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC65D25CDC785006C6DE6 /* PlanetDetailVC.swift */; };
 		483AC67025CDDC1E006C6DE6 /* Resident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC66F25CDDC1D006C6DE6 /* Resident.swift */; };
 		483AC67525CDDC31006C6DE6 /* Pilot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC67425CDDC31006C6DE6 /* Pilot.swift */; };
 		483AC68225CDF8F7006C6DE6 /* StarshipVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC68125CDF8F7006C6DE6 /* StarshipVM.swift */; };
 		483AC68725CDF910006C6DE6 /* StarshipDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC68625CDF910006C6DE6 /* StarshipDetailVM.swift */; };
-		483AC68C25CDFB37006C6DE6 /* StarshipViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC68B25CDFB37006C6DE6 /* StarshipViewFactory.swift */; };
 		483AC69125CE015E006C6DE6 /* StarshipDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC69025CE015E006C6DE6 /* StarshipDetailVC.swift */; };
 		483AC6A125CE0B16006C6DE6 /* PeopleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC6A025CE0B16006C6DE6 /* PeopleTests.swift */; };
 		483AC6AA25CE0BE8006C6DE6 /* ServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC6A925CE0BE8006C6DE6 /* ServiceMock.swift */; };
@@ -91,7 +89,7 @@
 		483AC5EF25CD7D78006C6DE6 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		483AC5F525CD7E07006C6DE6 /* API+Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Moya.swift"; sourceTree = "<group>"; };
 		483AC5FD25CD7E9C006C6DE6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		483AC61225CD875F006C6DE6 /* PeopleViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewFactory.swift; sourceTree = "<group>"; };
+		483AC61225CD875F006C6DE6 /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
 		483AC61725CD87B0006C6DE6 /* PeopleDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailVC.swift; sourceTree = "<group>"; };
 		483AC61F25CD9C51006C6DE6 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		483AC62725CD9D12006C6DE6 /* ActivityIndicator.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ActivityIndicator.json; sourceTree = "<group>"; };
@@ -99,13 +97,11 @@
 		483AC63225CD9E4C006C6DE6 /* PeopleDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailVM.swift; sourceTree = "<group>"; };
 		483AC64725CDB57C006C6DE6 /* PlanetVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetVM.swift; sourceTree = "<group>"; };
 		483AC64F25CDB594006C6DE6 /* PlanetDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailVM.swift; sourceTree = "<group>"; };
-		483AC65425CDC632006C6DE6 /* PlanetViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewFactory.swift; sourceTree = "<group>"; };
 		483AC65D25CDC785006C6DE6 /* PlanetDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailVC.swift; sourceTree = "<group>"; };
 		483AC66F25CDDC1D006C6DE6 /* Resident.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resident.swift; sourceTree = "<group>"; };
 		483AC67425CDDC31006C6DE6 /* Pilot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pilot.swift; sourceTree = "<group>"; };
 		483AC68125CDF8F7006C6DE6 /* StarshipVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipVM.swift; sourceTree = "<group>"; };
 		483AC68625CDF910006C6DE6 /* StarshipDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipDetailVM.swift; sourceTree = "<group>"; };
-		483AC68B25CDFB37006C6DE6 /* StarshipViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipViewFactory.swift; sourceTree = "<group>"; };
 		483AC69025CE015E006C6DE6 /* StarshipDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipDetailVC.swift; sourceTree = "<group>"; };
 		483AC6A025CE0B16006C6DE6 /* PeopleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTests.swift; sourceTree = "<group>"; };
 		483AC6A925CE0BE8006C6DE6 /* ServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMock.swift; sourceTree = "<group>"; };
@@ -303,9 +299,7 @@
 		483AC65925CDC734006C6DE6 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
-				483AC61225CD875F006C6DE6 /* PeopleViewFactory.swift */,
-				483AC65425CDC632006C6DE6 /* PlanetViewFactory.swift */,
-				483AC68B25CDFB37006C6DE6 /* StarshipViewFactory.swift */,
+				483AC61225CD875F006C6DE6 /* ViewFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -598,13 +592,11 @@
 				483AC63325CD9E4C006C6DE6 /* PeopleDetailVM.swift in Sources */,
 				483AC68725CDF910006C6DE6 /* StarshipDetailVM.swift in Sources */,
 				483AC67525CDDC31006C6DE6 /* Pilot.swift in Sources */,
-				483AC61325CD875F006C6DE6 /* PeopleViewFactory.swift in Sources */,
+				483AC61325CD875F006C6DE6 /* ViewFactory.swift in Sources */,
 				483AC62E25CD9E31006C6DE6 /* PeopleVM.swift in Sources */,
 				483AC65E25CDC785006C6DE6 /* PlanetDetailVC.swift in Sources */,
 				483AC55225C9EFAC006C6DE6 /* People.swift in Sources */,
-				483AC68C25CDFB37006C6DE6 /* StarshipViewFactory.swift in Sources */,
 				483AC5F625CD7E07006C6DE6 /* API+Moya.swift in Sources */,
-				483AC65525CDC633006C6DE6 /* PlanetViewFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

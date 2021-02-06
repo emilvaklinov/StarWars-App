@@ -109,7 +109,7 @@ class MainVC: UIViewController {
     // MARK: - Routs
     fileprivate func routeToCharacterDetails(for index: Int) {
         let model = viewModel.dataModel(for: index)
-        guard let view = PeopleViewFactory.createDetailView(for: model) else {
+        guard let view = ViewFactory.createDetailView(for: model) else {
             return
         }
         navigationController?.pushViewController(view, animated: true)
@@ -117,7 +117,7 @@ class MainVC: UIViewController {
     
     fileprivate func routeToPlanetDetails(for index: Int) {
         let modelPlanet = planetVM.dataModel(for: index)
-        guard let view = PlanetViewFactory.createDetailPlanetView(for: modelPlanet) else {
+        guard let view = ViewFactory.createDetailPlanetView(for: modelPlanet) else {
             return
         }
         navigationController?.pushViewController(view, animated: true)
@@ -125,7 +125,7 @@ class MainVC: UIViewController {
     
     fileprivate func routeToStarshipDetails(for index: Int) {
         let modelStarship = starshipVM.dataModel(for: index)
-        guard let view = StarshipViewFactory.createDetailStarshipView(for: modelStarship) else {
+        guard let view = ViewFactory.createDetailStarshipView(for: modelStarship) else {
             return
         }
         navigationController?.pushViewController(view, animated: true)
