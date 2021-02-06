@@ -12,6 +12,8 @@ class PlanetDetailVC: UIViewController {
 
     private var planetDetailVM: PlanetDetailVM?
     
+    /// Description
+    /// - Parameter planetDetailVM: planetDetailVM description
     func configure(with planetDetailVM: PlanetDetailVM) {
         self.planetDetailVM = planetDetailVM
     }
@@ -22,6 +24,7 @@ class PlanetDetailVC: UIViewController {
     }
 }
 
+// MARK: - DataSource
 extension PlanetDetailVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "planetDetail",

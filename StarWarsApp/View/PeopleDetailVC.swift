@@ -12,6 +12,8 @@ class PeopleDetailVC: UIViewController {
 
     private var viewModel: PeopleDetailVM?
     
+    /// Description
+    /// - Parameter viewModel: viewModel description
     func configure(with viewModel: PeopleDetailVM) {
         self.viewModel = viewModel
     }
@@ -22,6 +24,7 @@ class PeopleDetailVC: UIViewController {
     }
 }
 
+// MARK: - DataSource
 extension PeopleDetailVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "characterDetail",

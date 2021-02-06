@@ -12,6 +12,8 @@ class StarshipDetailVC: UIViewController {
 
     private var starshipDetailVM: StarshipDetailVM?
     
+    /// Description
+    /// - Parameter starshipDetailVM: starshipDetailVM description
     func configure(with starshipDetailVM: StarshipDetailVM) {
         self.starshipDetailVM = starshipDetailVM
     }
@@ -22,6 +24,7 @@ class StarshipDetailVC: UIViewController {
     }
 }
 
+// MARK: - DataSource
 extension StarshipDetailVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "starshipDetail",

@@ -18,13 +18,13 @@ class StarshipVM {
     let network = NetworkService()
     
     var starshipResults: [StarshipResult]? {
-        starshipModel?.results.sorted(by: { $0.name < $1.name})
+        starshipModel?.results.sorted(by: { $0.name! < $1.name!})
     }
     
     var starship: [String] {
         var starship = [String]()
         starshipResults?.forEach {
-            starship.append($0.name)
+            starship.append($0.name!)
     }
         return starship
     }

@@ -29,7 +29,7 @@ class MainVC: UIViewController {
         triggerFetchStarship()
     }
     
-    
+    // MARK: - Fetch
     private func triggerFetchPeople() {
         ActivityIndicator.shared.show(in: view)
         viewModel.fetchPeople()
@@ -66,6 +66,7 @@ class MainVC: UIViewController {
             }).disposed(by: disposeBag)
     }
     
+    // MARK: - Triger Films
     private func triggerFetchFilms(for index: Int) {
         ActivityIndicator.shared.show(in: view)
         viewModel.fetchFilms(for: index)
@@ -105,6 +106,7 @@ class MainVC: UIViewController {
             }.disposed(by: disposeBag)
     }
 
+    // MARK: - Routs
     fileprivate func routeToCharacterDetails(for index: Int) {
         let model = viewModel.dataModel(for: index)
         guard let view = PeopleViewFactory.createDetailView(for: model) else {
@@ -130,6 +132,7 @@ class MainVC: UIViewController {
     }
 }
 
+// MARK: - DataSource
 extension MainVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -139,7 +142,7 @@ extension MainVC: UITableViewDataSource {
         //  For the user details, return the count of the array
         case 0: return viewModel.people.count
         case 1: return planetVM.planet.count
-        case 2: return starshipVM.starship.count
+        case 2: return starshipVM.starship.count ?? 0
         default: return 0
         }
     }
@@ -203,6 +206,7 @@ extension MainVC: UITableViewDataSource {
     }
 }
 
+// MARK: - Delegate
 extension MainVC: UITableViewDelegate {
     internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {

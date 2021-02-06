@@ -12,6 +12,9 @@ class PlanetViewFactory {
     
     private init() { }
     
+    /// Description
+    /// - Parameter model: Create data Model for Planets
+    /// - Returns: view
     static func createDetailPlanetView(for model: PlanetDataModel) -> PlanetDetailVC? {
         let storyboard = UIStoryboard(name: "Main", bundle:nil)
         guard

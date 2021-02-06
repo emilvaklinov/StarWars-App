@@ -12,6 +12,9 @@ class PeopleViewFactory {
     
     private init() { }
     
+    /// Description
+    /// - Parameter model: create data view for People
+    /// - Returns: view
     static func createDetailView(for model: PeopleDataModel) -> PeopleDetailVC? {
         let storyboard = UIStoryboard(name: "Main", bundle:nil)
         guard

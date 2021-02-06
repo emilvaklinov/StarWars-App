@@ -12,6 +12,9 @@ class StarshipViewFactory {
     
     private init() { }
     
+    /// Description
+    /// - Parameter model: Create data model for Starships
+    /// - Returns: view
     static func createDetailStarshipView(for model: StarshipDataModel) -> StarshipDetailVC? {
         let storyboard = UIStoryboard(name: "Main", bundle:nil)
         guard
