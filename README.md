@@ -29,6 +29,7 @@ The used Cat API:
 
 ### Running site locally
 The app can be runed by Xcode simulator.
+In the terminal have to call 'pod install' to instal the pod files.
 To run the app on a device you need to choose team certificate.
 
 ### Version Control
