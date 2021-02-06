@@ -19,7 +19,7 @@ class PeopleDetailVM {
         case name, birthYear, height, mass, hairColor, skinColor, eyeColor, gender, film, crawlCharacter
     }
     
-    var model: PeopleDataModel?
+    fileprivate var model: PeopleDataModel?
     
     init(with model: PeopleDataModel) {
         self.model = model

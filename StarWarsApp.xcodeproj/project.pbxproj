@@ -10,7 +10,7 @@
 		440947A2FCBE780A9B5203BE /* Pods_StarWarsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A6B33160211203EE500B1E9 /* Pods_StarWarsApp.framework */; };
 		483AC4FF25C9BE7C006C6DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC4FE25C9BE7C006C6DE6 /* AppDelegate.swift */; };
 		483AC50125C9BE7C006C6DE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC50025C9BE7C006C6DE6 /* SceneDelegate.swift */; };
-		483AC50325C9BE7C006C6DE6 /* PeopleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC50225C9BE7C006C6DE6 /* PeopleVC.swift */; };
+		483AC50325C9BE7C006C6DE6 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC50225C9BE7C006C6DE6 /* MainVC.swift */; };
 		483AC50625C9BE7C006C6DE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483AC50425C9BE7C006C6DE6 /* Main.storyboard */; };
 		483AC50825C9BE80006C6DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 483AC50725C9BE80006C6DE6 /* Assets.xcassets */; };
 		483AC50B25C9BE80006C6DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483AC50925C9BE80006C6DE6 /* LaunchScreen.storyboard */; };
@@ -24,7 +24,7 @@
 		483AC5F025CD7D78006C6DE6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 483AC5EF25CD7D78006C6DE6 /* Localizable.strings */; };
 		483AC5F625CD7E07006C6DE6 /* API+Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC5F525CD7E07006C6DE6 /* API+Moya.swift */; };
 		483AC5FE25CD7E9C006C6DE6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC5FD25CD7E9C006C6DE6 /* NetworkService.swift */; };
-		483AC61325CD875F006C6DE6 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC61225CD875F006C6DE6 /* ViewFactory.swift */; };
+		483AC61325CD875F006C6DE6 /* PeopleViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC61225CD875F006C6DE6 /* PeopleViewFactory.swift */; };
 		483AC61825CD87B0006C6DE6 /* PeopleDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC61725CD87B0006C6DE6 /* PeopleDetailVC.swift */; };
 		483AC62025CD9C52006C6DE6 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC61F25CD9C51006C6DE6 /* ActivityIndicator.swift */; };
 		483AC62825CD9D12006C6DE6 /* ActivityIndicator.json in Resources */ = {isa = PBXBuildFile; fileRef = 483AC62725CD9D12006C6DE6 /* ActivityIndicator.json */; };
@@ -36,6 +36,13 @@
 		483AC65E25CDC785006C6DE6 /* PlanetDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC65D25CDC785006C6DE6 /* PlanetDetailVC.swift */; };
 		483AC67025CDDC1E006C6DE6 /* Resident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC66F25CDDC1D006C6DE6 /* Resident.swift */; };
 		483AC67525CDDC31006C6DE6 /* Pilot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC67425CDDC31006C6DE6 /* Pilot.swift */; };
+		483AC68225CDF8F7006C6DE6 /* StarshipVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC68125CDF8F7006C6DE6 /* StarshipVM.swift */; };
+		483AC68725CDF910006C6DE6 /* StarshipDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC68625CDF910006C6DE6 /* StarshipDetailVM.swift */; };
+		483AC68C25CDFB37006C6DE6 /* StarshipViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC68B25CDFB37006C6DE6 /* StarshipViewFactory.swift */; };
+		483AC69125CE015E006C6DE6 /* StarshipDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC69025CE015E006C6DE6 /* StarshipDetailVC.swift */; };
+		483AC6A125CE0B16006C6DE6 /* PeopleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC6A025CE0B16006C6DE6 /* PeopleTests.swift */; };
+		483AC6AA25CE0BE8006C6DE6 /* ServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AC6A925CE0BE8006C6DE6 /* ServiceMock.swift */; };
+		483AC6AF25CE0C4E006C6DE6 /* people.json in Resources */ = {isa = PBXBuildFile; fileRef = 483AC6AE25CE0C4E006C6DE6 /* people.json */; };
 		53935E3870198BFBE03CCB0C /* Pods_StarWarsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C85F8C49F4D002542110FD52 /* Pods_StarWarsAppTests.framework */; };
 		B5AAC21FD3BBDD19D4127975 /* Pods_StarWarsApp_StarWarsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3474E9D7EE00B13EBD382A0F /* Pods_StarWarsApp_StarWarsAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -65,7 +72,7 @@
 		483AC4FB25C9BE7C006C6DE6 /* StarWarsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		483AC4FE25C9BE7C006C6DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		483AC50025C9BE7C006C6DE6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		483AC50225C9BE7C006C6DE6 /* PeopleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleVC.swift; sourceTree = "<group>"; };
+		483AC50225C9BE7C006C6DE6 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		483AC50525C9BE7C006C6DE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		483AC50725C9BE80006C6DE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		483AC50A25C9BE80006C6DE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -84,7 +91,7 @@
 		483AC5EF25CD7D78006C6DE6 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		483AC5F525CD7E07006C6DE6 /* API+Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Moya.swift"; sourceTree = "<group>"; };
 		483AC5FD25CD7E9C006C6DE6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		483AC61225CD875F006C6DE6 /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
+		483AC61225CD875F006C6DE6 /* PeopleViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewFactory.swift; sourceTree = "<group>"; };
 		483AC61725CD87B0006C6DE6 /* PeopleDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailVC.swift; sourceTree = "<group>"; };
 		483AC61F25CD9C51006C6DE6 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		483AC62725CD9D12006C6DE6 /* ActivityIndicator.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ActivityIndicator.json; sourceTree = "<group>"; };
@@ -96,6 +103,13 @@
 		483AC65D25CDC785006C6DE6 /* PlanetDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailVC.swift; sourceTree = "<group>"; };
 		483AC66F25CDDC1D006C6DE6 /* Resident.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resident.swift; sourceTree = "<group>"; };
 		483AC67425CDDC31006C6DE6 /* Pilot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pilot.swift; sourceTree = "<group>"; };
+		483AC68125CDF8F7006C6DE6 /* StarshipVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipVM.swift; sourceTree = "<group>"; };
+		483AC68625CDF910006C6DE6 /* StarshipDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipDetailVM.swift; sourceTree = "<group>"; };
+		483AC68B25CDFB37006C6DE6 /* StarshipViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipViewFactory.swift; sourceTree = "<group>"; };
+		483AC69025CE015E006C6DE6 /* StarshipDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipDetailVC.swift; sourceTree = "<group>"; };
+		483AC6A025CE0B16006C6DE6 /* PeopleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTests.swift; sourceTree = "<group>"; };
+		483AC6A925CE0BE8006C6DE6 /* ServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMock.swift; sourceTree = "<group>"; };
+		483AC6AE25CE0C4E006C6DE6 /* people.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = people.json; sourceTree = "<group>"; };
 		8A6B33160211203EE500B1E9 /* Pods_StarWarsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C85F8C49F4D002542110FD52 /* Pods_StarWarsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB92567F3E54987F5CCDD32D /* Pods-StarWarsApp-StarWarsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsApp-StarWarsAppUITests.release.xcconfig"; path = "Target Support Files/Pods-StarWarsApp-StarWarsAppUITests/Pods-StarWarsApp-StarWarsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				483AC54525C9E746006C6DE6 /* AppDelegates */,
+				483AC65925CDC734006C6DE6 /* Factory */,
 				483AC55625C9EFDF006C6DE6 /* Models */,
 				483AC54925C9E75D006C6DE6 /* View */,
 				483AC62C25CD9E0C006C6DE6 /* ViewModel */,
@@ -179,6 +194,8 @@
 				483AC50C25C9BE80006C6DE6 /* Info.plist */,
 				483AC54125C9E735006C6DE6 /* Helpers */,
 				483AC5EF25CD7D78006C6DE6 /* Localizable.strings */,
+				483AC6A825CE0BCC006C6DE6 /* Mock */,
+				483AC69F25CE0AD6006C6DE6 /* Tests */,
 			);
 			path = StarWarsApp;
 			sourceTree = "<group>";
@@ -222,10 +239,10 @@
 		483AC54925C9E75D006C6DE6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				483AC50225C9BE7C006C6DE6 /* PeopleVC.swift */,
+				483AC50225C9BE7C006C6DE6 /* MainVC.swift */,
 				483AC61725CD87B0006C6DE6 /* PeopleDetailVC.swift */,
-				483AC65925CDC734006C6DE6 /* Factory */,
 				483AC65D25CDC785006C6DE6 /* PlanetDetailVC.swift */,
+				483AC69025CE015E006C6DE6 /* StarshipDetailVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -277,6 +294,8 @@
 				483AC63225CD9E4C006C6DE6 /* PeopleDetailVM.swift */,
 				483AC64725CDB57C006C6DE6 /* PlanetVM.swift */,
 				483AC64F25CDB594006C6DE6 /* PlanetDetailVM.swift */,
+				483AC68125CDF8F7006C6DE6 /* StarshipVM.swift */,
+				483AC68625CDF910006C6DE6 /* StarshipDetailVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -284,10 +303,28 @@
 		483AC65925CDC734006C6DE6 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
-				483AC61225CD875F006C6DE6 /* ViewFactory.swift */,
+				483AC61225CD875F006C6DE6 /* PeopleViewFactory.swift */,
 				483AC65425CDC632006C6DE6 /* PlanetViewFactory.swift */,
+				483AC68B25CDFB37006C6DE6 /* StarshipViewFactory.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		483AC69F25CE0AD6006C6DE6 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				483AC6A025CE0B16006C6DE6 /* PeopleTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		483AC6A825CE0BCC006C6DE6 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				483AC6A925CE0BE8006C6DE6 /* ServiceMock.swift */,
+				483AC6AE25CE0C4E006C6DE6 /* people.json */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		5E3A43A497EE0E8BC96F95E3 /* Frameworks */ = {
@@ -411,6 +448,7 @@
 			files = (
 				483AC62825CD9D12006C6DE6 /* ActivityIndicator.json in Resources */,
 				483AC50B25C9BE80006C6DE6 /* LaunchScreen.storyboard in Resources */,
+				483AC6AF25CE0C4E006C6DE6 /* people.json in Resources */,
 				483AC5F025CD7D78006C6DE6 /* Localizable.strings in Resources */,
 				483AC50825C9BE80006C6DE6 /* Assets.xcassets in Resources */,
 				483AC50625C9BE7C006C6DE6 /* Main.storyboard in Resources */,
@@ -541,11 +579,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				483AC68225CDF8F7006C6DE6 /* StarshipVM.swift in Sources */,
 				483AC64825CDB57D006C6DE6 /* PlanetVM.swift in Sources */,
 				483AC5FE25CD7E9C006C6DE6 /* NetworkService.swift in Sources */,
 				483AC53D25C9E72E006C6DE6 /* String+Localizable.swift in Sources */,
 				483AC56325C9F095006C6DE6 /* Starship.swift in Sources */,
-				483AC50325C9BE7C006C6DE6 /* PeopleVC.swift in Sources */,
+				483AC6AA25CE0BE8006C6DE6 /* ServiceMock.swift in Sources */,
+				483AC50325C9BE7C006C6DE6 /* MainVC.swift in Sources */,
 				483AC62025CD9C52006C6DE6 /* ActivityIndicator.swift in Sources */,
 				483AC61825CD87B0006C6DE6 /* PeopleDetailVC.swift in Sources */,
 				483AC67025CDDC1E006C6DE6 /* Resident.swift in Sources */,
@@ -553,13 +593,16 @@
 				483AC55E25C9F02F006C6DE6 /* Planet.swift in Sources */,
 				483AC5E825CD7BC9006C6DE6 /* Film.swift in Sources */,
 				483AC65025CDB594006C6DE6 /* PlanetDetailVM.swift in Sources */,
+				483AC69125CE015E006C6DE6 /* StarshipDetailVC.swift in Sources */,
 				483AC50125C9BE7C006C6DE6 /* SceneDelegate.swift in Sources */,
 				483AC63325CD9E4C006C6DE6 /* PeopleDetailVM.swift in Sources */,
+				483AC68725CDF910006C6DE6 /* StarshipDetailVM.swift in Sources */,
 				483AC67525CDDC31006C6DE6 /* Pilot.swift in Sources */,
-				483AC61325CD875F006C6DE6 /* ViewFactory.swift in Sources */,
+				483AC61325CD875F006C6DE6 /* PeopleViewFactory.swift in Sources */,
 				483AC62E25CD9E31006C6DE6 /* PeopleVM.swift in Sources */,
 				483AC65E25CDC785006C6DE6 /* PlanetDetailVC.swift in Sources */,
 				483AC55225C9EFAC006C6DE6 /* People.swift in Sources */,
+				483AC68C25CDFB37006C6DE6 /* StarshipViewFactory.swift in Sources */,
 				483AC5F625CD7E07006C6DE6 /* API+Moya.swift in Sources */,
 				483AC65525CDC633006C6DE6 /* PlanetViewFactory.swift in Sources */,
 			);
@@ -569,6 +612,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				483AC6A125CE0B16006C6DE6 /* PeopleTests.swift in Sources */,
 				483AC51625C9BE80006C6DE6 /* StarWarsAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

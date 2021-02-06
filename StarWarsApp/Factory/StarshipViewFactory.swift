@@ -1,5 +1,5 @@
 //
-//  ViewFactory.swift
+//  StarshipViewFactory.swift
 //  StarWarsApp
 //
 //  Created by Emil Vaklinov on 05/02/2021.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-class ViewFactory {
+class StarshipViewFactory {
     
     private init() { }
     
-    static func createDetailView(for model: PeopleDataModel) -> PeopleDetailVC? {
+    static func createDetailStarshipView(for model: StarshipDataModel) -> StarshipDetailVC? {
         let storyboard = UIStoryboard(name: "Main", bundle:nil)
         guard
             let view = storyboard
-                       .instantiateViewController(withIdentifier: "PeopleDetailVC") as? PeopleDetailVC else { return nil }
-        let viewModel = PeopleDetailVM(with: model)
+                       .instantiateViewController(withIdentifier: "StarshipDetailVC") as? StarshipDetailVC else { return nil }
+        let viewModel = StarshipDetailVM(with: model)
         view.configure(with: viewModel)
         return view
     }

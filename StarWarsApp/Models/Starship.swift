@@ -9,7 +9,7 @@ import Foundation
 
 struct Starship: Codable {
     
-    let starshipResults: [StarshipResult]
+    let results: [StarshipResult]
 }
 
 // MARK: - Result
@@ -20,7 +20,6 @@ struct StarshipResult: Codable {
     let maxAtmospheringSpeed, hyperdriveRating, MGLT, cargoCapacity, consumables: String
     let films: [String]
     let pilots: [String]
-    let url, created, edited: String
     
     enum CodingKeys: String, CodingKey {
         case name, model, manufacturer
@@ -32,6 +31,6 @@ struct StarshipResult: Codable {
         case costInCredits = "cost_in_credits"
         case MGLT, consumables
         case films, pilots
-        case url, created, edited
+
     }
 }

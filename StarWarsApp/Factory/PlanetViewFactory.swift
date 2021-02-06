@@ -12,11 +12,11 @@ class PlanetViewFactory {
     
     private init() { }
     
-    static func createDetailView(for model: PlanetDataModel) -> PlanetDetailVC? {
+    static func createDetailPlanetView(for model: PlanetDataModel) -> PlanetDetailVC? {
         let storyboard = UIStoryboard(name: "Main", bundle:nil)
         guard
             let view = storyboard
-                       .instantiateViewController(withIdentifier: "PeopleDetailVC") as? PlanetDetailVC else { return nil }
+                       .instantiateViewController(withIdentifier: "PlanetDetailVC") as? PlanetDetailVC else { return nil }
         let viewModel = PlanetDetailVM(with: model)
         view.configure(with: viewModel)
         return view

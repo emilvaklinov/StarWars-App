@@ -15,10 +15,10 @@ class PlanetDetailVM {
     }
     
     enum RowType {
-        case name, diameter, rotationPeriod, gravity, population, climate, terrain, surfaceWater, residents, film, url, created, edited, crawlCharacter
+        case name, diameter, rotationPeriod, gravity, population, climate, terrain, surfaceWater, film, orbitalPeriod, crawlCharacter
     }
     
-    var model: PlanetDataModel?
+    fileprivate var model: PlanetDataModel?
     
     init(with model: PlanetDataModel) {
         self.model = model
@@ -45,7 +45,7 @@ func rowCount(for index: Int) -> Int {
 
 private var attributeRows: [RowType] {
     let rows: [RowType] = [
-        .name, .climate, .created, .diameter, .edited, .gravity, .population, .rotationPeriod, .surfaceWater, .terrain, .url, .residents
+        .name, .climate, .diameter, .orbitalPeriod, .gravity, .population, .rotationPeriod, .surfaceWater, .terrain
                           ]
     return rows
 }
@@ -94,12 +94,8 @@ func rowDetails(for index: IndexPath) -> (description: String, value: String?) {
 //    case (.attributes, .residents):
 //        return ("Residents".localized(), model?.planet?.residents)
         
-    case (.attributes, .url):
-        return ("Url".localized(), model?.planet?.url)
-    case (.attributes, .created):
-        return ("Created".localized(), model?.planet?.created)
-    case (.attributes, .edited):
-        return ("Edited".localized(), model?.planet?.edited)
+    case (.attributes, .orbitalPeriod):
+        return ("Orbital Period".localized(), model?.planet?.orbitalPeriod)
     case (.films, .film):
         return ("Film".localized(), film(for: index)?.title)
     case (.films, .crawlCharacter):
@@ -109,7 +105,6 @@ func rowDetails(for index: IndexPath) -> (description: String, value: String?) {
         return ("", "")
     }
 }
-    
 
 private func film(for index: IndexPath) -> Film? {
     guard let films = model?.films else {
