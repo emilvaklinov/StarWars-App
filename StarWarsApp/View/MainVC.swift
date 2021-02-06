@@ -142,7 +142,7 @@ extension MainVC: UITableViewDataSource {
         //  For the user details, return the count of the array
         case 0: return viewModel.people.count
         case 1: return planetVM.planet.count
-        case 2: return starshipVM.starship.count ?? 0
+        case 2: return starshipVM.starship.count
         default: return 0
         }
     }
