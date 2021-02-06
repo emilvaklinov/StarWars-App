@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 import Moya
 
+/// Fertching protocol
 protocol NetworkServiceProtocol {
     func fetchPeople() -> Single<People>
     func fetchPlanet() -> Single<Planet>

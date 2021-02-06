@@ -69,7 +69,10 @@ private func rowType(for index: IndexPath) -> RowType {
         return singleFilmRows[index.row]
     }
 }
-
+    
+    /// Description
+    /// - Parameter index: index path
+    /// - Returns: cases returning data
 func rowDetails(for index: IndexPath) -> (description: String, value: String?) {
     
     let section = sectionType(for: index.section)
@@ -101,7 +104,10 @@ func rowDetails(for index: IndexPath) -> (description: String, value: String?) {
         return ("", "")
     }
 }
-
+    
+    /// Description
+    /// - Parameter index: index path
+    /// - Returns: Films
 private func film(for index: IndexPath) -> Film? {
     guard let films = model?.films else {
         return nil

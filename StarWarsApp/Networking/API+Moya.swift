@@ -23,13 +23,15 @@ enum API {
 
 extension API: TargetType {
     
+    /// Base URL
     var baseURL: URL {
         guard let url = URL(string: "https://swapi.dev/api") else {
             fatalError("Base URL is invalid")
         }
         return url
     }
-
+    
+    /// Paths
     var path: String {
         switch self {
         case .fetchPeople:
