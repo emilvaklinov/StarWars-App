@@ -149,7 +149,7 @@
         <!--People DetailVC-->
         <scene sceneID="U9I-vM-Zff">
             <objects>
-                <viewController storyboardIdentifier="PeopleDetailVC" id="PD4-B1-2OE" customClass="PeopleDetailVC" customModule="StarWarsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PeopleDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PD4-B1-2OE" customClass="PeopleDetailVC" customModule="StarWarsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z7S-h1-Osq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,6 +157,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lGc-oQ-wi3">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" systemColor="systemOrangeColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="characterDetail" textLabel="yZH-9k-Hwi" detailTextLabel="G9T-1X-8Nz" style="IBUITableViewCellStyleValue1" id="7AQ-p7-eR4">
                                         <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
@@ -206,7 +207,7 @@
         <!--Planet DetailVC-->
         <scene sceneID="kJk-rH-7rz">
             <objects>
-                <viewController storyboardIdentifier="PlanetDetailVC" id="mAt-Vg-HQz" customClass="PlanetDetailVC" customModule="StarWarsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlanetDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mAt-Vg-HQz" customClass="PlanetDetailVC" customModule="StarWarsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mUp-9N-urd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,6 +215,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iJj-zk-yuK">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" systemColor="systemPinkColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="planetDetail" textLabel="ynB-TP-o1p" detailTextLabel="OQn-h7-wF2" style="IBUITableViewCellStyleValue1" id="ZxM-El-JtT">
                                         <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
@@ -264,7 +266,7 @@
         <!--Starship DetailVC-->
         <scene sceneID="Lf8-fq-T40">
             <objects>
-                <viewController storyboardIdentifier="StarshipDetailVC" id="8gV-Ih-2HR" customClass="StarshipDetailVC" customModule="StarWarsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StarshipDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8gV-Ih-2HR" customClass="StarshipDetailVC" customModule="StarWarsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="krg-PP-KPE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -272,8 +274,9 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xdu-kh-fdt">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" systemColor="systemRedColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="characterDetail" textLabel="Jdz-KX-grd" detailTextLabel="qTq-lJ-5KI" style="IBUITableViewCellStyleValue1" id="pRH-pb-cko">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="starshipDetail" textLabel="Jdz-KX-grd" detailTextLabel="qTq-lJ-5KI" style="IBUITableViewCellStyleValue1" id="pRH-pb-cko">
                                         <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pRH-pb-cko" id="SHd-6P-mNv">
@@ -328,6 +331,9 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
