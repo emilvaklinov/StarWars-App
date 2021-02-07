@@ -43,5 +43,5 @@ To run the app on a device you need to choose team certificate.
 - More UNIT testing.
 - Refactoring
 
-![1-st-screen-with-3-sections](https://user-images.githubusercontent.com/30974420/107117970-dccfcb80-6875-11eb-947a-0cb499e44592.png),![Detaild-screen](https://user-images.githubusercontent.com/30974420/107117971-de00f880-6875-11eb-9b81-341cae0014b5.png)
+![Screenshot 2021-02-07 at 14 14 28](https://user-images.githubusercontent.com/30974420/107149139-e11be780-694e-11eb-83d4-2819eb545531.png)
 
